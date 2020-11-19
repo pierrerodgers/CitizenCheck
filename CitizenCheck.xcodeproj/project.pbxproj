@@ -15,6 +15,9 @@
 		C1214B9E2566EC7C00EDFC3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1214B9C2566EC7C00EDFC3F /* LaunchScreen.storyboard */; };
 		C1214BA92566EC7D00EDFC3F /* CitizenCheckTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BA82566EC7D00EDFC3F /* CitizenCheckTests.swift */; };
 		C1214BB42566EC7D00EDFC3F /* CitizenCheckUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BB32566EC7D00EDFC3F /* CitizenCheckUITests.swift */; };
+		C1214BC52566EC9700EDFC3F /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BC42566EC9700EDFC3F /* DataModels.swift */; };
+		C1214BCA2566EC9E00EDFC3F /* EligibilityQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BC92566EC9E00EDFC3F /* EligibilityQuestionView.swift */; };
+		C1214BCF2566ECA300EDFC3F /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		C1214BAF2566EC7D00EDFC3F /* CitizenCheckUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CitizenCheckUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1214BB32566EC7D00EDFC3F /* CitizenCheckUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitizenCheckUITests.swift; sourceTree = "<group>"; };
 		C1214BB52566EC7D00EDFC3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C1214BC42566EC9700EDFC3F /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
+		C1214BC92566EC9E00EDFC3F /* EligibilityQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EligibilityQuestionView.swift; sourceTree = "<group>"; };
+		C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				C1214B912566EC7900EDFC3F /* AppDelegate.swift */,
 				C1214B932566EC7900EDFC3F /* SceneDelegate.swift */,
 				C1214B952566EC7900EDFC3F /* ContentView.swift */,
+				C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */,
+				C1214BC42566EC9700EDFC3F /* DataModels.swift */,
+				C1214BC92566EC9E00EDFC3F /* EligibilityQuestionView.swift */,
 				C1214B972566EC7C00EDFC3F /* Assets.xcassets */,
 				C1214B9C2566EC7C00EDFC3F /* LaunchScreen.storyboard */,
 				C1214B9F2566EC7C00EDFC3F /* Info.plist */,
@@ -267,8 +276,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1214B922566EC7900EDFC3F /* AppDelegate.swift in Sources */,
+				C1214BCF2566ECA300EDFC3F /* ButtonStyles.swift in Sources */,
+				C1214BC52566EC9700EDFC3F /* DataModels.swift in Sources */,
 				C1214B942566EC7900EDFC3F /* SceneDelegate.swift in Sources */,
 				C1214B962566EC7900EDFC3F /* ContentView.swift in Sources */,
+				C1214BCA2566EC9E00EDFC3F /* EligibilityQuestionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
