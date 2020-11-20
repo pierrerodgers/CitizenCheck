@@ -14,7 +14,15 @@ struct ToggleButtonStyle : ButtonStyle {
     var selectedOption : String?
     
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label.padding(15)
-            .background(selectedOption == option ?  Color.blue : nil)
+        
+        if selectedOption == option {
+            return AnyView(configuration.label.padding(15).background(Color.blue))
+        }
+        else {
+            return AnyView(configuration.label.padding(15).border(Color.blue, width: 2))
+        }
+        
+       // configuration.label.padding(15)
+            //.background(selectedOption == option ?  Color.blue : nil)
     }
 }
