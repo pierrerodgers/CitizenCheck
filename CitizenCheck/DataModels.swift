@@ -13,6 +13,6 @@ struct EligibilityQuestion {
     let options : [String]
     var response : String?
     
-    var id : String = "0"
+    var id : Int = 0
     
 }
