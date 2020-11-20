@@ -18,6 +18,8 @@
 		C1214BC52566EC9700EDFC3F /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BC42566EC9700EDFC3F /* DataModels.swift */; };
 		C1214BCA2566EC9E00EDFC3F /* EligibilityQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BC92566EC9E00EDFC3F /* EligibilityQuestionView.swift */; };
 		C1214BCF2566ECA300EDFC3F /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */; };
+		C19A7AF925675BD500FFD951 /* EligibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A7AF825675BD500FFD951 /* EligibilityView.swift */; };
+		C19A7AFE25675BE000FFD951 /* EligibilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		C1214BC42566EC9700EDFC3F /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		C1214BC92566EC9E00EDFC3F /* EligibilityQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EligibilityQuestionView.swift; sourceTree = "<group>"; };
 		C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		C19A7AF825675BD500FFD951 /* EligibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibilityView.swift; sourceTree = "<group>"; };
+		C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibilityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */,
 				C1214BC42566EC9700EDFC3F /* DataModels.swift */,
 				C1214BC92566EC9E00EDFC3F /* EligibilityQuestionView.swift */,
+				C19A7AF825675BD500FFD951 /* EligibilityView.swift */,
+				C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */,
 				C1214B972566EC7C00EDFC3F /* Assets.xcassets */,
 				C1214B9C2566EC7C00EDFC3F /* LaunchScreen.storyboard */,
 				C1214B9F2566EC7C00EDFC3F /* Info.plist */,
@@ -275,10 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C19A7AFE25675BE000FFD951 /* EligibilityViewModel.swift in Sources */,
 				C1214B922566EC7900EDFC3F /* AppDelegate.swift in Sources */,
 				C1214BCF2566ECA300EDFC3F /* ButtonStyles.swift in Sources */,
 				C1214BC52566EC9700EDFC3F /* DataModels.swift in Sources */,
 				C1214B942566EC7900EDFC3F /* SceneDelegate.swift in Sources */,
+				C19A7AF925675BD500FFD951 /* EligibilityView.swift in Sources */,
 				C1214B962566EC7900EDFC3F /* ContentView.swift in Sources */,
 				C1214BCA2566EC9E00EDFC3F /* EligibilityQuestionView.swift in Sources */,
 			);

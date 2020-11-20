@@ -9,8 +9,8 @@ import Foundation
 
 
 struct EligibilityQuestion {
-    let question : String = "Are you at least 18 years old?"
-    let options : [String] = ["Yes", "No"]
+    let question : String
+    let options : [String]
     var response : String?
     
     var id : String = "0"

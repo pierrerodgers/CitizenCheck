@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct EligibilityQuestionView: View {
-    @State var question : EligibilityQuestion = EligibilityQuestion()
+    @Binding var question : EligibilityQuestion
     
     var body: some View {
         VStack(alignment:.center, spacing:10){
@@ -20,9 +20,6 @@ struct EligibilityQuestionView: View {
                     }.buttonStyle(ToggleButtonStyle(option: option, selectedOption: question.response))
                 }
             }
-            
-            
-            Text("Next")
         }
     }
     
@@ -30,9 +27,12 @@ struct EligibilityQuestionView: View {
         question.response = option
     }
 }
-
+/*
 struct EligibilityQuestionView_Previews: PreviewProvider {
+    @State var question = EligibilityQuestion(question:"How long have you been a lawful permanent resident?", options: ["Less than five years", "Five years or more"])
+    
     static var previews: some View {
-        EligibilityQuestionView()
+        EligibilityQuestionView(question:$question)
     }
 }
+*/
