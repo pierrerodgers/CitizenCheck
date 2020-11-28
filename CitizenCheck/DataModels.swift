@@ -16,3 +16,12 @@ struct EligibilityQuestion {
     var id : Int = 0
     
 }
+
+struct Document {
+    let title : String
+    let description : String
+    var completed : Bool
+    
+    var id : Int = 0
+    
+}

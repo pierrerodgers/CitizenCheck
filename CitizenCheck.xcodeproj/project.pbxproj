@@ -20,6 +20,8 @@
 		C1214BCF2566ECA300EDFC3F /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */; };
 		C12E7E062572C73C000AD660 /* ChecklistQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12E7E052572C73C000AD660 /* ChecklistQuestionsView.swift */; };
 		C12E7E0B2572C74B000AD660 /* ChecklistQuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12E7E0A2572C74B000AD660 /* ChecklistQuestionsViewModel.swift */; };
+		C12E7E182572E1A3000AD660 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12E7E172572E1A3000AD660 /* ChecklistItem.swift */; };
+		C12E7E1D2572E669000AD660 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12E7E1C2572E669000AD660 /* ChecklistView.swift */; };
 		C19A7AF925675BD500FFD951 /* EligibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A7AF825675BD500FFD951 /* EligibilityView.swift */; };
 		C19A7AFE25675BE000FFD951 /* EligibilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +63,8 @@
 		C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		C12E7E052572C73C000AD660 /* ChecklistQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistQuestionsView.swift; sourceTree = "<group>"; };
 		C12E7E0A2572C74B000AD660 /* ChecklistQuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistQuestionsViewModel.swift; sourceTree = "<group>"; };
+		C12E7E172572E1A3000AD660 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		C12E7E1C2572E669000AD660 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
 		C19A7AF825675BD500FFD951 /* EligibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibilityView.swift; sourceTree = "<group>"; };
 		C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibilityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +128,8 @@
 				C12E7E052572C73C000AD660 /* ChecklistQuestionsView.swift */,
 				C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */,
 				C1214B972566EC7C00EDFC3F /* Assets.xcassets */,
+				C12E7E172572E1A3000AD660 /* ChecklistItem.swift */,
+				C12E7E1C2572E669000AD660 /* ChecklistView.swift */,
 				C1214B9C2566EC7C00EDFC3F /* LaunchScreen.storyboard */,
 				C1214B9F2566EC7C00EDFC3F /* Info.plist */,
 				C1214B992566EC7C00EDFC3F /* Preview Content */,
@@ -290,8 +296,10 @@
 				C19A7AFE25675BE000FFD951 /* EligibilityViewModel.swift in Sources */,
 				C12E7E0B2572C74B000AD660 /* ChecklistQuestionsViewModel.swift in Sources */,
 				C1214B922566EC7900EDFC3F /* AppDelegate.swift in Sources */,
+				C12E7E1D2572E669000AD660 /* ChecklistView.swift in Sources */,
 				C1214BCF2566ECA300EDFC3F /* ButtonStyles.swift in Sources */,
 				C1214BC52566EC9700EDFC3F /* DataModels.swift in Sources */,
+				C12E7E182572E1A3000AD660 /* ChecklistItem.swift in Sources */,
 				C12E7E062572C73C000AD660 /* ChecklistQuestionsView.swift in Sources */,
 				C1214B942566EC7900EDFC3F /* SceneDelegate.swift in Sources */,
 				C19A7AF925675BD500FFD951 /* EligibilityView.swift in Sources */,
