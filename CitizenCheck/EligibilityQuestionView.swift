@@ -13,7 +13,7 @@ struct EligibilityQuestionView: View {
     var body: some View {
         VStack(alignment:.center, spacing:10){
             Text(question.question).font(.title).multilineTextAlignment(.center)
-            HStack{
+            VStack{
                 ForEach(question.options, id:\.self) { option in
                     Button(action: {self.selectOption(option)}) {
                         Text(option)
