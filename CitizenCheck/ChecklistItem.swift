@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ChecklistItem: View {
+    @ObservedObject var model : ChecklistViewModel
+    
     @State var document : Document
     @State var showDescription = false
     
@@ -15,7 +17,13 @@ struct ChecklistItem: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
                 Check(isChecked: $document.completed).onTapGesture {
-                    document.completed.toggle()
+                    if document.completed {
+                        model.uncompleteDocument(document.id)
+                    }
+                    else {
+                        model.completeDocument(document.id)
+                    }
+                    
                 }
                 Text(document.title).bold()
                 Spacer()
@@ -57,7 +65,9 @@ struct Check : View {
 struct ChecklistItem_Previews: PreviewProvider {
     static var testDoc = Document(title: "Include two identical color photographs with your name and A-Number written lightly in pencil on the back of each photo.", description: "See Part 5 of Form M-476 (A Guide to Naturalization) and Form N-400 (Application for Naturalization) for more details about photo requirements.", completed: false)
     
+    static var model = ChecklistViewModel()
+    
     static var previews: some View {
-        ChecklistItem(document: testDoc)
+        ChecklistItem(model:model, document: testDoc)
     }
 }

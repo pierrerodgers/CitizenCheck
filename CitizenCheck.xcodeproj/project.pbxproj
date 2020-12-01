@@ -18,10 +18,12 @@
 		C1214BC52566EC9700EDFC3F /* DataModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BC42566EC9700EDFC3F /* DataModels.swift */; };
 		C1214BCA2566EC9E00EDFC3F /* EligibilityQuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BC92566EC9E00EDFC3F /* EligibilityQuestionView.swift */; };
 		C1214BCF2566ECA300EDFC3F /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */; };
+		C12BA47A2575E60B006431AD /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12BA4792575E60B006431AD /* AppData.swift */; };
 		C12E7E062572C73C000AD660 /* ChecklistQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12E7E052572C73C000AD660 /* ChecklistQuestionsView.swift */; };
 		C12E7E0B2572C74B000AD660 /* ChecklistQuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12E7E0A2572C74B000AD660 /* ChecklistQuestionsViewModel.swift */; };
 		C12E7E182572E1A3000AD660 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12E7E172572E1A3000AD660 /* ChecklistItem.swift */; };
 		C12E7E1D2572E669000AD660 /* ChecklistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12E7E1C2572E669000AD660 /* ChecklistView.swift */; };
+		C132D87F25747574008A0A68 /* ChecklistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132D87E25747574008A0A68 /* ChecklistViewModel.swift */; };
 		C19A7AF925675BD500FFD951 /* EligibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A7AF825675BD500FFD951 /* EligibilityView.swift */; };
 		C19A7AFE25675BE000FFD951 /* EligibilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -61,10 +63,12 @@
 		C1214BC42566EC9700EDFC3F /* DataModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModels.swift; sourceTree = "<group>"; };
 		C1214BC92566EC9E00EDFC3F /* EligibilityQuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EligibilityQuestionView.swift; sourceTree = "<group>"; };
 		C1214BCE2566ECA300EDFC3F /* ButtonStyles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
+		C12BA4792575E60B006431AD /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		C12E7E052572C73C000AD660 /* ChecklistQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistQuestionsView.swift; sourceTree = "<group>"; };
 		C12E7E0A2572C74B000AD660 /* ChecklistQuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistQuestionsViewModel.swift; sourceTree = "<group>"; };
 		C12E7E172572E1A3000AD660 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		C12E7E1C2572E669000AD660 /* ChecklistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistView.swift; sourceTree = "<group>"; };
+		C132D87E25747574008A0A68 /* ChecklistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewModel.swift; sourceTree = "<group>"; };
 		C19A7AF825675BD500FFD951 /* EligibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibilityView.swift; sourceTree = "<group>"; };
 		C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibilityViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +133,8 @@
 				C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */,
 				C1214B972566EC7C00EDFC3F /* Assets.xcassets */,
 				C12E7E172572E1A3000AD660 /* ChecklistItem.swift */,
+				C132D87E25747574008A0A68 /* ChecklistViewModel.swift */,
+				C12BA4792575E60B006431AD /* AppData.swift */,
 				C12E7E1C2572E669000AD660 /* ChecklistView.swift */,
 				C1214B9C2566EC7C00EDFC3F /* LaunchScreen.storyboard */,
 				C1214B9F2566EC7C00EDFC3F /* Info.plist */,
@@ -297,6 +303,7 @@
 				C12E7E0B2572C74B000AD660 /* ChecklistQuestionsViewModel.swift in Sources */,
 				C1214B922566EC7900EDFC3F /* AppDelegate.swift in Sources */,
 				C12E7E1D2572E669000AD660 /* ChecklistView.swift in Sources */,
+				C132D87F25747574008A0A68 /* ChecklistViewModel.swift in Sources */,
 				C1214BCF2566ECA300EDFC3F /* ButtonStyles.swift in Sources */,
 				C1214BC52566EC9700EDFC3F /* DataModels.swift in Sources */,
 				C12E7E182572E1A3000AD660 /* ChecklistItem.swift in Sources */,
@@ -305,6 +312,7 @@
 				C19A7AF925675BD500FFD951 /* EligibilityView.swift in Sources */,
 				C1214B962566EC7900EDFC3F /* ContentView.swift in Sources */,
 				C1214BCA2566EC9E00EDFC3F /* EligibilityQuestionView.swift in Sources */,
+				C12BA47A2575E60B006431AD /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
