@@ -27,7 +27,6 @@ struct EligibilityView: View {
                     .multilineTextAlignment(.center)
                     .padding()
                     .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 1.0, green: 0.7568627450980392, blue: 0.7568627450980392)/*@END_MENU_TOKEN@*/)
-                    
                     .padding()
                 Button(action:model.restart) {
                     Text("Restart").font(.custom("Futura", size:20))
