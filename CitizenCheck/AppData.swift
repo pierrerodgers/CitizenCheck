@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class AppData {
+class AppData : ObservableObject {
 
     // Holds the state of the app overall
     // i.e. is the user still filling the eligibility questions, or the checklist questions, or are they up to the checklist
