@@ -11,13 +11,24 @@ struct ChecklistQuestionsView: View {
     @ObservedObject var model : ChecklistQuestionsViewModel
     
     var body: some View {
-        VStack(alignment:.center) {
-            EligibilityQuestionView(question: $model.currentQuestion)
-            
-            Button(action: model.next) {
-                Text("Next").font(.custom("Futura", size:20))
+        switch(model.state) {
+        case .intro:
+            VStack{
+                JustSoYouKnowView()
+                Button(action: {model.state = .questions }) {
+                    Text("Start questions")
+                }
             }
+            
+        case .questions:
+            VStack(alignment:.center) {
+                EligibilityQuestionView(question: $model.currentQuestion)
+                
+                Button(action: model.next) {
+                    Text("Next").font(.custom("Futura", size:20))
+                }
 
+            }
         }
     }
 }

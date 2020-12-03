@@ -11,6 +11,12 @@ import SwiftUI
 class ChecklistQuestionsViewModel : ObservableObject {
     @Published var currentQuestion: EligibilityQuestion
     
+    enum State {
+        case intro, questions
+    }
+    
+    @Published var state : State = .intro
+    
     private let questions : [EligibilityQuestion]
     private var currentQuestionIndex = 0 {
         didSet {

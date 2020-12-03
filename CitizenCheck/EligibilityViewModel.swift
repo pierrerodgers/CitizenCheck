@@ -10,7 +10,7 @@ import SwiftUI
 
 class EligibilityViewModel : ObservableObject {
     @Published var currentQuestion : EligibilityQuestion
-    @Published var state : EligibilityViewModel.State = .pending
+    @Published var state : EligibilityViewModel.State = .launch
     
     private var appData : AppData
     
@@ -22,7 +22,7 @@ class EligibilityViewModel : ObservableObject {
     }
     
     enum State {
-        case ineligible, pending, eligible
+        case ineligible, pending, eligible, launch, disclaimer
     }
     
     //TODO: specify why ineligible
