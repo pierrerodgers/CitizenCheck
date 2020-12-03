@@ -49,7 +49,7 @@ struct EligibilityView: View {
                     Text("Get Started").font(.custom("Futura", size:20))
                         .multilineTextAlignment(.trailing)
                 }
-                //TO DO: click to next view
+                //TO DO: click to next view (just so you know view)
             }
         }
         
