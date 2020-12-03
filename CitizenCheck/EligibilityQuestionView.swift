@@ -12,12 +12,17 @@ struct EligibilityQuestionView: View {
     
     var body: some View {
         VStack(alignment:.center, spacing:10){
-            Text(question.question).font(.title).multilineTextAlignment(.center)
-            VStack{
+            Text(question.question).font(.custom("Futura", size:25))
+                .fontWeight(.bold)
+                .foregroundColor(Color(red: 0.012, green: 0.129, blue: 0.325)).multilineTextAlignment(.center)
+                .padding()
+            VStack (alignment:.center,spacing:15){
                 ForEach(question.options, id:\.self) { option in
                     Button(action: {self.selectOption(option)}) {
-                        Text(option)
-                    }.buttonStyle(ToggleButtonStyle(option: option, selectedOption: question.response))
+                        Text(option).font(.custom("Futura", size:20))
+                            .foregroundColor(Color(red: 0.012, green: 0.129, blue: 0.325)).multilineTextAlignment(.center)
+                    }.buttonStyle(ToggleButtonStyle(option: option, selectedOption: question.response)).background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.7411764705882353, green: 0.8313725490196079, blue: 1.0)/*@END_MENU_TOKEN@*/).border(/*@START_MENU_TOKEN@*/Color(red: 0.7411764705882353, green: 0.8313725490196079, blue: 1.0)/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                    
                 }
             }
         }

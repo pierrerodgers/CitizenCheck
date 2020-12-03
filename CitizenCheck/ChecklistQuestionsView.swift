@@ -21,10 +21,12 @@ struct ChecklistQuestionsView: View {
         }
     }
 }
-/*
-struct ChecklistQuestionsView_Previews: PreviewProvider {
-    static var previews: some View {
-        ChecklistQuestionsView()
-    }
-}
-*/
+
+//struct ChecklistQuestionsView_Previews: PreviewProvider {
+//    
+//    @State static var model = ChecklistQuestionsViewModel(question: "Do you live outside the US?", options: ["Yes", "No"])
+//    
+//    static var previews: some View {
+//        ChecklistQuestionsView(model:$model)
+//    }
+//}
