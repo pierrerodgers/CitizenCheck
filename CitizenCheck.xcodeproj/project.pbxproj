@@ -29,6 +29,7 @@
 		C72817132579172B0047CF55 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72817122579172B0047CF55 /* DisclaimerView.swift */; };
 		C728171825791AB30047CF55 /* JustSoYouKnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728171725791AB30047CF55 /* JustSoYouKnowView.swift */; };
 		C728171D25791BB30047CF55 /* AdditionalQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728171C25791BB30047CF55 /* AdditionalQuestionsView.swift */; };
+		C728172725791D470047CF55 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728172625791D470047CF55 /* LaunchScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		C72817122579172B0047CF55 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
 		C728171725791AB30047CF55 /* JustSoYouKnowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustSoYouKnowView.swift; sourceTree = "<group>"; };
 		C728171C25791BB30047CF55 /* AdditionalQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalQuestionsView.swift; sourceTree = "<group>"; };
+		C728172625791D470047CF55 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +109,6 @@
 		C1214B852566EC7800EDFC3F = {
 			isa = PBXGroup;
 			children = (
-				C72817122579172B0047CF55 /* DisclaimerView.swift */,
-				C728171725791AB30047CF55 /* JustSoYouKnowView.swift */,
-				C728171C25791BB30047CF55 /* AdditionalQuestionsView.swift */,
 				C1214B902566EC7900EDFC3F /* CitizenCheck */,
 				C1214BA72566EC7D00EDFC3F /* CitizenCheckTests */,
 				C1214BB22566EC7D00EDFC3F /* CitizenCheckUITests */,
@@ -130,6 +129,9 @@
 		C1214B902566EC7900EDFC3F /* CitizenCheck */ = {
 			isa = PBXGroup;
 			children = (
+				C72817122579172B0047CF55 /* DisclaimerView.swift */,
+				C728171725791AB30047CF55 /* JustSoYouKnowView.swift */,
+				C728171C25791BB30047CF55 /* AdditionalQuestionsView.swift */,
 				C1214B912566EC7900EDFC3F /* AppDelegate.swift */,
 				C1214B932566EC7900EDFC3F /* SceneDelegate.swift */,
 				C1214B952566EC7900EDFC3F /* ContentView.swift */,
@@ -141,6 +143,7 @@
 				C12E7E052572C73C000AD660 /* ChecklistQuestionsView.swift */,
 				C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */,
 				C1214B972566EC7C00EDFC3F /* Assets.xcassets */,
+				C728172625791D470047CF55 /* LaunchScreenView.swift */,
 				C12E7E172572E1A3000AD660 /* ChecklistItem.swift */,
 				C132D87E25747574008A0A68 /* ChecklistViewModel.swift */,
 				C12BA4792575E60B006431AD /* AppData.swift */,
@@ -325,6 +328,7 @@
 				C1214BCA2566EC9E00EDFC3F /* EligibilityQuestionView.swift in Sources */,
 				C72817132579172B0047CF55 /* DisclaimerView.swift in Sources */,
 				C12BA47A2575E60B006431AD /* AppData.swift in Sources */,
+				C728172725791D470047CF55 /* LaunchScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
