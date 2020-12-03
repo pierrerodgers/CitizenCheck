@@ -77,8 +77,9 @@ class AppData : ObservableObject {
         self.state = .eligibility
         
         // Initialise document lists
-        self.completedDocuments = []
-        self.uncompletedDocuments = []
+        self.uncompletedDocuments = [Document(title: "A check or money order for the application fee & biometric services fee", description: "See N-400 form for more info and details: https://www.uscis.gov/n-400. Write your A-Number (listed on your Permanent Resident Card) on the back of the check or money order.", completed: false, id: 0)]
+        
+        self.completedDocuments = [Document(title: "A photocopy of both sides of your Permanent Resident Card (aka Green Card). ", description: "If you have lost the card, submit a photocopy of the receipt of your Form I-90 (Application to Replace Permanent Resident Card)", completed: true, id: 1)]
 
     }
 

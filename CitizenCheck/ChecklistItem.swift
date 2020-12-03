@@ -65,7 +65,7 @@ struct Check : View {
 struct ChecklistItem_Previews: PreviewProvider {
     static var testDoc = Document(title: "Include two identical color photographs with your name and A-Number written lightly in pencil on the back of each photo.", description: "See Part 5 of Form M-476 (A Guide to Naturalization) and Form N-400 (Application for Naturalization) for more details about photo requirements.", completed: false)
     
-    static var model = ChecklistViewModel()
+    static var model = ChecklistViewModel(appData: AppData())
     
     static var previews: some View {
         ChecklistItem(model:model, document: testDoc)

@@ -18,7 +18,7 @@ struct ChecklistView: View {
                             .fontWeight(.regular)
                             .foregroundColor(Color(red: 0.03529411764705882, green: 0.6274509803921569, blue: 0.09411764705882353))){
                     
-                    ForEach(model.documents, id:\.id) { document in
+                    ForEach(model.uncompletedDocuments, id:\.id) { document in
                         ChecklistItem(model:self.model, document: document)
                     }.buttonStyle(PlainButtonStyle())
                     .foregroundColor(Color(red: 0.011764705882352941, green: 0.11764705882352941, blue: 0.3254901960784314))
@@ -39,7 +39,7 @@ struct ChecklistView: View {
 }
 
 struct ChecklistView_Previews: PreviewProvider {
-    static var model = ChecklistViewModel()
+    static var model = ChecklistViewModel(appData: AppData())
     
     static var previews: some View {
         ChecklistView(model: model)

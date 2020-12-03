@@ -24,7 +24,7 @@ struct ChecklistQuestionsView: View {
 
 struct ChecklistQuestionsView_Previews:PreviewProvider {
 
-    static var model = ChecklistQuestionsViewModel()
+    static var model = ChecklistQuestionsViewModel(appData: AppData())
 
     static var previews: some View {
         ChecklistQuestionsView(model: model)

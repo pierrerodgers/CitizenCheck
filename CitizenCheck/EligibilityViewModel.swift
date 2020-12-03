@@ -12,6 +12,8 @@ class EligibilityViewModel : ObservableObject {
     @Published var currentQuestion : EligibilityQuestion
     @Published var state : EligibilityViewModel.State = .pending
     
+    private var appData : AppData
+    
     private let questions : [EligibilityQuestion]
     private var currentQuestionIndex = 0 {
         didSet {
@@ -26,7 +28,7 @@ class EligibilityViewModel : ObservableObject {
     //TODO: specify why ineligible
     //TODO: how to shorten question3 to fit 
 
-    init() {
+    init(appData : AppData) {
         let question0 = EligibilityQuestion(question: "Are you at least 18 years old?", options: ["Yes","No"], id:0)
         let question1 = EligibilityQuestion(question: "Are you a lawful permanent resident (green card holder)?", options: ["Yes", "No"], id:1)
         let question2 = EligibilityQuestion(question: "How long have you been a lawful permanent resident?", options: ["Under five years", "Five years or more"], id:2)
@@ -39,6 +41,8 @@ class EligibilityViewModel : ObservableObject {
         
         self.currentQuestionIndex = 0
         self.currentQuestion = questions[currentQuestionIndex]
+        
+        self.appData = appData
     }
     
     
@@ -75,6 +79,10 @@ class EligibilityViewModel : ObservableObject {
                 self.state = .eligible
             }
         }
+    }
+    
+    func goToChecklistQuestions() {
+        self.appData.state = .checklistQuestions
     }
     
     func restart() {

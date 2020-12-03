@@ -13,11 +13,11 @@ struct AppView: View {
     var body: some View {
         switch appData.state {
         case .eligibility:
-            EligibilityView(model: EligibilityViewModel())
+            EligibilityView(model: EligibilityViewModel(appData: appData))
         case .checklistQuestions:
-            ChecklistQuestionsView(model: ChecklistQuestionsViewModel())
+            ChecklistQuestionsView(model: ChecklistQuestionsViewModel(appData: appData))
         case .checklist:
-            ChecklistView(model: ChecklistViewModel())
+            ChecklistView(model: ChecklistViewModel(appData: appData))
         }
     }
 }

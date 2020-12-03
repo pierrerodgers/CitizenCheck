@@ -43,7 +43,7 @@ struct EligibilityView: View {
                     .padding()
                     .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.6941176470588235, green: 0.9450980392156862, blue: 0.7176470588235294)/*@END_MENU_TOKEN@*/)
                     .padding()
-                Button(action:model.restart) {
+                Button(action:model.goToChecklistQuestions) {
                     Text("Get Started").font(.custom("Futura", size:20))
                         .multilineTextAlignment(.trailing)
                 }
@@ -57,6 +57,6 @@ struct EligibilityView: View {
 
 struct EligibilityView_Previews: PreviewProvider {
     static var previews: some View {
-        EligibilityView(model: EligibilityViewModel())
+        EligibilityView(model: EligibilityViewModel(appData: AppData()))
     }
 }

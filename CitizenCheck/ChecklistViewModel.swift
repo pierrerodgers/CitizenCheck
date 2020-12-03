@@ -6,16 +6,21 @@
 //
 import Foundation
 import SwiftUI
+import Combine
 
 class ChecklistViewModel : ObservableObject {
-    @Published var documents : [Document]
+    @Published var uncompletedDocuments : [Document]
     @Published var completedDocuments : [Document]
     
+    @ObservedObject private var appData : AppData
+    
+    private var bag : Set<AnyCancellable> = Set()
+    
     func completeDocument(_ documentId:Int) {
-        let idx = documents.firstIndex { $0.id == documentId }!
-        var document = documents[idx]
+        let idx = uncompletedDocuments.firstIndex { $0.id == documentId }!
+        var document = uncompletedDocuments[idx]
         document.completed = true
-        documents.remove(at:idx)
+        uncompletedDocuments.remove(at:idx)
         completedDocuments.append(document)
     }
     
@@ -24,12 +29,21 @@ class ChecklistViewModel : ObservableObject {
         var document = completedDocuments[idx]
         document.completed = false
         completedDocuments.remove(at:idx)
-        documents.append(document)
+        uncompletedDocuments.append(document)
     }
     
-    init() {
-        documents = [Document(title: "A check or money order for the application fee & biometric services fee", description: "See N-400 form for more info and details: https://www.uscis.gov/n-400. Write your A-Number (listed on your Permanent Resident Card) on the back of the check or money order.", completed: false, id: 0)]
+    init(appData: AppData) {
+        self.appData = appData
         
-        completedDocuments = [Document(title: "A photocopy of both sides of your Permanent Resident Card (aka Green Card). ", description: "If you have lost the card, submit a photocopy of the receipt of your Form I-90 (Application to Replace Permanent Resident Card)", completed: true, id: 1)]
+        self.uncompletedDocuments = appData.uncompletedDocuments
+        self.completedDocuments = appData.completedDocuments
+        
+        appData.$completedDocuments.sink(receiveValue: { documents in
+            self.completedDocuments = documents
+        }).store(in: &bag)
+        
+        appData.$uncompletedDocuments.sink(receiveValue: { documents in
+            self.uncompletedDocuments = documents
+        }).store(in: &bag)
     }
 }
