@@ -33,8 +33,6 @@ struct EligibilityView: View {
                 }
             }
             
-            //TODO: specify why ineligible
-            //TODO: Add text for select all that apply portion
         
         case .eligible:
             VStack{
