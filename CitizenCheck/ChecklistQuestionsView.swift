@@ -15,18 +15,18 @@ struct ChecklistQuestionsView: View {
             EligibilityQuestionView(question: $model.currentQuestion)
             
             Button(action: model.next) {
-                Text("Next")
+                Text("Next").font(.custom("Futura", size:20))
             }
 
         }
     }
 }
 
-//struct ChecklistQuestionsView_Previews: PreviewProvider {
-//    
-//    @State static var model = ChecklistQuestionsViewModel(question: "Do you live outside the US?", options: ["Yes", "No"])
-//    
-//    static var previews: some View {
-//        ChecklistQuestionsView(model:$model)
-//    }
-//}
+struct ChecklistQuestionsView_Previews:PreviewProvider {
+
+    static var model = ChecklistQuestionsViewModel()
+
+    static var previews: some View {
+        ChecklistQuestionsView(model: model)
+    }
+}
