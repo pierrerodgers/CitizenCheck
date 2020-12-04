@@ -86,14 +86,17 @@ class AppData : ObservableObject {
     func saveEligbility(_ isEligible:Bool) {
         // TO COMPLETE: Use UserDefaults to save whether or not the user is eligible for citizenship or not
 
-
+        UserDefaults.standard.set(isEligible, forKey: "isEligible")
     }
 
     func saveRequiredDocuments(_ documents:[Document]) {
        // TO COMPLETE: Use UserDefaults to save a list of the ids of the required documents based on the
         // checklist question answers
-
-
+        var indexId = [Int]()
+        for doc in documents {
+            indexId.append(doc.id)
+        }
+        UserDefaults.standard.set(indexId, forKey: "requiredDocuments")
     }
 
     
@@ -101,18 +104,32 @@ class AppData : ObservableObject {
         // TO COMPLETE: Use UserDefaults to keep track of completed documents
 
         // I think we should just keep track of the IDs of the completed and incomplete documents
-
-
+        if let completeDocumentIds = (UserDefaults.standard.array(forKey: "documents")
+                                        as? [Int]) {
+            var documentIds = completeDocumentIds
+            documentIds.append(document.id)
+            UserDefaults.standard.set(documentIds, forKey:"documents")
+        } else { // no data stored for key "completeDocuments" in UserDefaults
+            var documentIds = [Int]()
+            documentIds.append(document.id)
+            UserDefaults.standard.set(documentIds, forKey:"documents")
+        }
     }
 
     func uncompleteDocument(_ document: Document) {
         // TO COMPLETE: Use UserDefaults to keep track of completed documents
 
         // I think we should just keep track of the IDs of the completed and incomplete documents
-
+        if let completeDocumentIds = (UserDefaults.standard.array(forKey: "documents")
+                                        as? [Int]) {
+            var documentIds = completeDocumentIds
+            if let index = documentIds.firstIndex(where: {$0 == document.id}) {
+              documentIds.remove(at: index)
+            }
+            UserDefaults.standard.set(documentIds, forKey:"documents")
+        } else { // no data stored for key "completeDocuments" in UserDefaults
+            // do nothing
+        }
 
     }
-
-
-
 }
