@@ -12,8 +12,8 @@ class AppData : ObservableObject {
 
     // Holds the state of the app overall
     // i.e. is the user still filling the eligibility questions, or the checklist questions, or are they up to the checklist
-    enum AppState {
-        case eligibility, checklistQuestions, checklist
+    enum AppState : Int {
+        case eligibility = 0, checklistQuestions = 1, checklist = 2
     }
 
     @Published var state : AppState
@@ -71,16 +71,43 @@ class AppData : ObservableObject {
 
         // TO COMPLETE: Initialise all documents (from Google Doc)
         self.documents = Dictionary<Int, Document>()
-        self.requiredDocuments = Dictionary<Int, Document>()
-
+        documents[0] = Document(title: "A check or money order for the application fee & biometric services fee", description: "See N-400 form for more info and details: https://www.uscis.gov/n-400. Write your A-Number (listed on your Permanent Resident Card) on the back of the check or money order.", completed: false, id: 0)
+        documents[1] = Document(title: "A photocopy of both sides of your Permanent Resident Card (aka Green Card). ", description: "If you have lost the card, submit a photocopy of the receipt of your Form I-90 (Application to Replace Permanent Resident Card)", completed: false, id: 1)
+        documents[2] = Document(title: "Include document(s) that show you legally changed your name including marriage certificate, court document, etc.", description: "", completed: false, id: 2)
+        documents[3] = Document(title: "Include proof that your earlier marriages ended (divorce decrees, annulments, or death certificate", description: "", completed: false, id: 3)
+        documents[4] = Document(title: "Include evidence that you and your family still lived, worked or kept ties to the US, which could be:", description: "An IRS tax return listing information for the last 5 years", completed: false, id: 4)
+        // STILL NEEDS TO BE FINISHED!
+        
+        
         // App State
-        self.state = .eligibility
+        let stateValue = UserDefaults.standard.value(forKey: "appState") as? Int ?? 0
+        self.state = AppState(rawValue: stateValue) ?? .eligibility
         
-        // Initialise document lists
-        self.uncompletedDocuments = [Document(title: "A check or money order for the application fee & biometric services fee", description: "See N-400 form for more info and details: https://www.uscis.gov/n-400. Write your A-Number (listed on your Permanent Resident Card) on the back of the check or money order.", completed: false, id: 0)]
+        // Fill required documents
+        self.requiredDocuments = Dictionary<Int, Document>()
+        let requiredDocsIndexes = (UserDefaults.standard.array(forKey: "requiredDocuments") ?? []) as? [Int] ?? []
+        for index in requiredDocsIndexes {
+            requiredDocuments[index] = documents[index]
+        }
         
-        self.completedDocuments = [Document(title: "A photocopy of both sides of your Permanent Resident Card (aka Green Card). ", description: "If you have lost the card, submit a photocopy of the receipt of your Form I-90 (Application to Replace Permanent Resident Card)", completed: true, id: 1)]
+        // Fill completed documents
+        var completedDocs = [Document]()
+        let completedDocsIndexes = (UserDefaults.standard.array(forKey: "documents") ?? []) as? [Int] ?? []
+        for index in completedDocsIndexes {
+            completedDocs.append(documents[index]!)
+        }
+        self.completedDocuments = completedDocs
+        
+        // Fill uncompleted documents
+        let uncompleted = Array(requiredDocuments.filter { !completedDocsIndexes.contains($0.key) }.values)
+        self.uncompletedDocuments = uncompleted
 
+        
+
+    }
+    
+    func saveState(_ state: AppState) {
+        UserDefaults.standard.setValue(state.rawValue, forKey: "appState")
     }
 
     func saveEligbility(_ isEligible:Bool) {
@@ -97,6 +124,10 @@ class AppData : ObservableObject {
             indexId.append(doc.id)
         }
         UserDefaults.standard.set(indexId, forKey: "requiredDocuments")
+        
+        for index in indexId {
+            self.completedDocuments.append(self.documents[index]!)
+        }
     }
 
     
