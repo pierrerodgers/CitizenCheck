@@ -12,6 +12,21 @@ struct EligibilityView: View {
     
     var body: some View {
         switch model.state {
+        case .launch:
+            VStack{
+                LaunchScreenView()
+                Button(action: {model.state = .disclaimer}) {
+                    Text("Next")
+                }
+            }
+        case .disclaimer:
+            VStack{
+                DisclaimerView()
+                Button(action: {model.state = .pending}) {
+                    Text("Next")
+                }
+            }
+            
         case .pending:
             VStack(alignment:.center) {
                 EligibilityQuestionView(question: $model.currentQuestion)
