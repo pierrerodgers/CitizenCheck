@@ -94,7 +94,9 @@ class AppData : ObservableObject {
         var completedDocs = [Document]()
         let completedDocsIndexes = (UserDefaults.standard.array(forKey: "documents") ?? []) as? [Int] ?? []
         for index in completedDocsIndexes {
-            completedDocs.append(documents[index]!)
+            var completedDoc = documents[index]!
+            completedDoc.completed = true
+            completedDocs.append(completedDoc)
         }
         self.completedDocuments = completedDocs
         

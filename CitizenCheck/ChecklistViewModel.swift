@@ -19,6 +19,7 @@ class ChecklistViewModel : ObservableObject {
     func completeDocument(_ documentId:Int) {
         let idx = uncompletedDocuments.firstIndex { $0.id == documentId }!
         var document = uncompletedDocuments[idx]
+        appData.completeDocument(document)
         document.completed = true
         uncompletedDocuments.remove(at:idx)
         completedDocuments.append(document)
@@ -27,6 +28,7 @@ class ChecklistViewModel : ObservableObject {
     func uncompleteDocument(_ documentId:Int) {
         let idx = completedDocuments.firstIndex { $0.id == documentId }!
         var document = completedDocuments[idx]
+        appData.uncompleteDocument(document)
         document.completed = false
         completedDocuments.remove(at:idx)
         uncompletedDocuments.append(document)
