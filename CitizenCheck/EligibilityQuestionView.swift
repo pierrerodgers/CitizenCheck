@@ -21,11 +21,12 @@ struct EligibilityQuestionView: View {
                     Button(action: {self.selectOption(option)}) {
                         Text(option).font(.custom("Futura", size:20))
                             .foregroundColor(Color(red: 0.012, green: 0.129, blue: 0.325)).multilineTextAlignment(.center)
-                    }.buttonStyle(ToggleButtonStyle(option: option, selectedOption: question.response)).background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 0.7411764705882353, green: 0.8313725490196079, blue: 1.0)/*@END_MENU_TOKEN@*/).border(/*@START_MENU_TOKEN@*/Color(red: 0.7411764705882353, green: 0.8313725490196079, blue: 1.0)/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/)
+                    }.buttonStyle(ToggleButtonStyle(option: option, selectedOption: question.response))
                     
                 }
-            }
-        }
+            }.padding()
+        }.padding().overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 1).foregroundColor(.black))
+
     }
     
     func selectOption(_ option:String) {

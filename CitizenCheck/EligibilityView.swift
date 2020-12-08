@@ -15,25 +15,21 @@ struct EligibilityView: View {
         case .launch:
             VStack{
                 LaunchScreenView()
-                Button(action: {model.state = .disclaimer}) {
-                    Text("Next")
-                }
+                Button("Next", action: {model.state = .disclaimer}).buttonStyle(ActionButtonStyle())
             }
         case .disclaimer:
             VStack{
                 DisclaimerView()
                 Button(action: {model.state = .pending}) {
                     Text("Next")
-                }
+                }.buttonStyle(ActionButtonStyle())
             }
             
         case .pending:
             VStack(alignment:.center) {
-                EligibilityQuestionView(question: $model.currentQuestion)
+                EligibilityQuestionView(question: $model.currentQuestion).background(Color.white).cornerRadius(10).shadow(radius: 3)
                 
-                Button(action: model.next) {
-                    Text("Next").font(.custom("Futura", size:20))
-                }
+                Button("Next", action:model.next).buttonStyle(ActionButtonStyle())
             }
         case .ineligible:
             VStack (alignment:.center){
@@ -44,8 +40,8 @@ struct EligibilityView: View {
                     .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(red: 1.0, green: 0.7568627450980392, blue: 0.7568627450980392)/*@END_MENU_TOKEN@*/)
                     .padding()
                 Button(action:model.restart) {
-                    Text("Restart").font(.custom("Futura", size:20))
-                }
+                    Text("Restart")
+                }.buttonStyle(ActionButtonStyle())
             }
             
         
