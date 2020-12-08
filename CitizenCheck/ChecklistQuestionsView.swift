@@ -13,20 +13,14 @@ struct ChecklistQuestionsView: View {
     var body: some View {
         switch(model.state) {
         case .intro:
-            VStack{
-                JustSoYouKnowView()
-                Button(action: {model.state = .questions }) {
-                    Text("Start questions")
-                }
-            }
+            AlertView(text: "The Naturalization filing fee costs $750. You may be eligible for a fee reduction or waiver if you are a military applicant, above 75 years old, or cannot afford the fee.", actionText: "Get started", type: .information, action: {model.state = .questions})
             
+        
         case .questions:
             VStack(alignment:.center) {
-                EligibilityQuestionView(question: $model.currentQuestion)
+                EligibilityQuestionView(question: $model.currentQuestion).padding()
                 
-                Button(action: model.next) {
-                    Text("Next").font(.custom("Futura", size:20))
-                }
+                Button("Next", action: model.next).buttonStyle(ActionButtonStyle())
 
             }
         }

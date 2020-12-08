@@ -27,8 +27,7 @@
 		C132D87F25747574008A0A68 /* ChecklistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C132D87E25747574008A0A68 /* ChecklistViewModel.swift */; };
 		C19A7AF925675BD500FFD951 /* EligibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A7AF825675BD500FFD951 /* EligibilityView.swift */; };
 		C19A7AFE25675BE000FFD951 /* EligibilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */; };
-		C72817132579172B0047CF55 /* DisclaimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72817122579172B0047CF55 /* DisclaimerView.swift */; };
-		C728171825791AB30047CF55 /* JustSoYouKnowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728171725791AB30047CF55 /* JustSoYouKnowView.swift */; };
+		C1EF5DC52580043B0048E514 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1EF5DC42580043B0048E514 /* AlertView.swift */; };
 		C728171D25791BB30047CF55 /* AdditionalQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728171C25791BB30047CF55 /* AdditionalQuestionsView.swift */; };
 		C728172725791D470047CF55 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C728172625791D470047CF55 /* LaunchScreenView.swift */; };
 /* End PBXBuildFile section */
@@ -77,8 +76,7 @@
 		C132D87E25747574008A0A68 /* ChecklistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewModel.swift; sourceTree = "<group>"; };
 		C19A7AF825675BD500FFD951 /* EligibilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibilityView.swift; sourceTree = "<group>"; };
 		C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EligibilityViewModel.swift; sourceTree = "<group>"; };
-		C72817122579172B0047CF55 /* DisclaimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisclaimerView.swift; sourceTree = "<group>"; };
-		C728171725791AB30047CF55 /* JustSoYouKnowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustSoYouKnowView.swift; sourceTree = "<group>"; };
+		C1EF5DC42580043B0048E514 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		C728171C25791BB30047CF55 /* AdditionalQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalQuestionsView.swift; sourceTree = "<group>"; };
 		C728172625791D470047CF55 /* LaunchScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,8 +129,6 @@
 		C1214B902566EC7900EDFC3F /* CitizenCheck */ = {
 			isa = PBXGroup;
 			children = (
-				C72817122579172B0047CF55 /* DisclaimerView.swift */,
-				C728171725791AB30047CF55 /* JustSoYouKnowView.swift */,
 				C728171C25791BB30047CF55 /* AdditionalQuestionsView.swift */,
 				C1214B912566EC7900EDFC3F /* AppDelegate.swift */,
 				C1214B932566EC7900EDFC3F /* SceneDelegate.swift */,
@@ -142,6 +138,7 @@
 				C1214BC42566EC9700EDFC3F /* DataModels.swift */,
 				C1214BC92566EC9E00EDFC3F /* EligibilityQuestionView.swift */,
 				C19A7AF825675BD500FFD951 /* EligibilityView.swift */,
+				C1EF5DC42580043B0048E514 /* AlertView.swift */,
 				C12E7E0A2572C74B000AD660 /* ChecklistQuestionsViewModel.swift */,
 				C12E7E052572C73C000AD660 /* ChecklistQuestionsView.swift */,
 				C19A7AFD25675BE000FFD951 /* EligibilityViewModel.swift */,
@@ -315,10 +312,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C19A7AFE25675BE000FFD951 /* EligibilityViewModel.swift in Sources */,
-				C728171825791AB30047CF55 /* JustSoYouKnowView.swift in Sources */,
 				C103034A2579637300B98710 /* AppView.swift in Sources */,
 				C12E7E0B2572C74B000AD660 /* ChecklistQuestionsViewModel.swift in Sources */,
 				C1214B922566EC7900EDFC3F /* AppDelegate.swift in Sources */,
+				C1EF5DC52580043B0048E514 /* AlertView.swift in Sources */,
 				C12E7E1D2572E669000AD660 /* ChecklistView.swift in Sources */,
 				C132D87F25747574008A0A68 /* ChecklistViewModel.swift in Sources */,
 				C728171D25791BB30047CF55 /* AdditionalQuestionsView.swift in Sources */,
@@ -330,7 +327,6 @@
 				C19A7AF925675BD500FFD951 /* EligibilityView.swift in Sources */,
 				C1214B962566EC7900EDFC3F /* ContentView.swift in Sources */,
 				C1214BCA2566EC9E00EDFC3F /* EligibilityQuestionView.swift in Sources */,
-				C72817132579172B0047CF55 /* DisclaimerView.swift in Sources */,
 				C12BA47A2575E60B006431AD /* AppData.swift in Sources */,
 				C728172725791D470047CF55 /* LaunchScreenView.swift in Sources */,
 			);
