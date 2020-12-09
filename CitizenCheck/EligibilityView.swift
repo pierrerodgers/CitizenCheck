@@ -20,6 +20,8 @@ struct EligibilityView: View {
         case .disclaimer:
             VStack{
                 AlertView(text: "This is app is not an authorized legal service. We recommend further consultation with immigration/legal professionals to be sure about required documents and processes.", actionText: "Next", type: .disclaimer, action: {model.state = .pending})
+                    
+                    
             }
             
         case .pending:
@@ -27,6 +29,9 @@ struct EligibilityView: View {
                 EligibilityQuestionView(question: $model.currentQuestion).background(Color.white).cornerRadius(10).shadow(radius: 3)
                 
                 Button("Next", action:model.next).buttonStyle(ActionButtonStyle())
+                Button("Previous",
+                       action: model.prev)
+                    .buttonStyle(ActionButtonStyle())
             }.padding()
         case .ineligible:
             AlertView(text: "You are NOT eligible to apply for citizenship", actionText: "Restart", type: .warning, action: model.restart)

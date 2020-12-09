@@ -81,6 +81,18 @@ class EligibilityViewModel : ObservableObject {
         }
     }
     
+    func prev(){
+        if currentQuestion.id > 0{
+            self.currentQuestionIndex = currentQuestion.id - 1
+            self.state = .pending
+        }
+        else {
+            self.currentQuestionIndex = currentQuestion.id
+            self.state = .disclaimer
+        }
+        
+    }
+    
     func goToChecklistQuestions() {
         self.appData.state = .checklistQuestions
     }
