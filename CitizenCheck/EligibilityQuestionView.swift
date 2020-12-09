@@ -12,10 +12,18 @@ struct EligibilityQuestionView: View {
     
     var body: some View {
         VStack(alignment:.center, spacing:10){
-            Text(question.question).font(.custom("Futura", size:25))
-                .fontWeight(.bold)
-                .foregroundColor(Color(red: 0.012, green: 0.129, blue: 0.325)).multilineTextAlignment(.center)
-                .padding()
+            if question.id != 3{
+                Text(question.question).font(.custom("Futura", size:25))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(red: 0.012, green: 0.129, blue: 0.325)).multilineTextAlignment(.center)
+                    .padding()
+            }
+            else {
+                Text(question.question).font(.custom("Futura", size:13))
+                    .fontWeight(.bold)
+                    .foregroundColor(Color(red: 0.012, green: 0.129, blue: 0.325)).multilineTextAlignment(.center)
+                    .padding()
+            }
             VStack (alignment:.center,spacing:15){
                 ForEach(question.options, id:\.self) { option in
                     Button(action: {self.selectOption(option)}) {
