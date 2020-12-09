@@ -69,8 +69,8 @@ class AppData : ObservableObject {
         self.checklistQuestions = [checklistQuestion0, checklistQuestion1, checklistQuestion2, checklistQuestion3, checklistQuestion4, checklistQuestion5, checklistQuestion6, checklistQuestion7, checklistQuestion8, checklistQuestion9, checklistQuestion10, checklistQuestion11]
         
 
-        // TO COMPLETE: Initialise all documents (from Google Doc)
         self.documents = Dictionary<Int, Document>()
+        
         documents[0] = Document(title: "A check or money order for the application fee & biometric services fee", description: "See N-400 form for more info and details: https://www.uscis.gov/n-400. Write your A-Number (listed on your Permanent Resident Card) on the back of the check or money order.", completed: false, id: 0)
         documents[1] = Document(title: "A photocopy of both sides of your Permanent Resident Card (aka Green Card). ", description: "If you have lost the card, submit a photocopy of the receipt of your Form I-90 (Application to Replace Permanent Resident Card)", completed: false, id: 1)
         documents[22] = Document(title: "Two identical color photographs with your name and A-Number written lightly in pencil on the back of each photo.", description: "See Part 5 of Form M-476 (A Guide to Naturalization) and Form N-400 (Application for Naturalization) for more details about photo requirements.", completed: false, id: 22)
