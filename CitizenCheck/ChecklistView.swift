@@ -14,7 +14,7 @@ struct ChecklistView: View {
         VStack{
             Text("CHECKLIST").font(.custom("Futura", size:22)).fontWeight(.semibold).foregroundColor(Color(red: 0.011764705882352941, green: 0.11764705882352941, blue: 0.3254901960784314)).padding(.top, -12.0)
             List {
-                Section(header:Text("Foundational Documents").font(.custom("Futura", size:18))
+                Section(header:Text("To be completed").font(.custom("Futura", size:18))
                             .fontWeight(.regular)
                             .foregroundColor(Color(red: 0.03529411764705882, green: 0.6274509803921569, blue: 0.09411764705882353))){
                     
