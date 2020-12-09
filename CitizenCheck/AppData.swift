@@ -73,10 +73,57 @@ class AppData : ObservableObject {
         self.documents = Dictionary<Int, Document>()
         documents[0] = Document(title: "A check or money order for the application fee & biometric services fee", description: "See N-400 form for more info and details: https://www.uscis.gov/n-400. Write your A-Number (listed on your Permanent Resident Card) on the back of the check or money order.", completed: false, id: 0)
         documents[1] = Document(title: "A photocopy of both sides of your Permanent Resident Card (aka Green Card). ", description: "If you have lost the card, submit a photocopy of the receipt of your Form I-90 (Application to Replace Permanent Resident Card)", completed: false, id: 1)
-        documents[2] = Document(title: "Include document(s) that show you legally changed your name including marriage certificate, court document, etc.", description: "", completed: false, id: 2)
-        documents[3] = Document(title: "Include proof that your earlier marriages ended (divorce decrees, annulments, or death certificate", description: "", completed: false, id: 3)
-        documents[4] = Document(title: "Include evidence that you and your family still lived, worked or kept ties to the US, which could be:", description: "An IRS tax return listing information for the last 5 years", completed: false, id: 4)
-        // STILL NEEDS TO BE FINISHED!
+        documents[22] = Document(title: "Two identical color photographs with your name and A-Number written lightly in pencil on the back of each photo.", description: "See Part 5 of Form M-476 (A Guide to Naturalization) and Form N-400 (Application for Naturalization) for more details about photo requirements.", completed: false, id: 22)
+        documents[23] = Document(title: "Complete G-28 Form (Notice of Entry of Appearance as Attorney or Accredited Representative: https://www.uscis.gov/g-28)", description: "See https://www.uscis.gov/g-28 for more information", completed: false, id: 23)
+        documents[2] = Document(title: "Document(s) that show you legally changed your name including marriage certificate, court document, etc.", description: "", completed: false, id: 2)
+        documents[3] = Document(title: "Proof that your earlier marriages ended (divorce decrees, annulments, or death certificates)", description: "This can be divorce decrees, annulments, or death certificates", completed: false, id: 3)
+        documents[4] = Document(title: "Evidence that you and your family still lived, worked or kept ties to the US", description: "This can be an IRS tax return listing information for the last 5 years", completed: false, id: 4)
+        documents[5] = Document(title: "Any court order or government order related to financial support", description: "", completed: false, id:5) //5 & 6 ALWAYS GO TOGETHER
+        documents[6] = Document(title: "Evidence of your financial support showing you have followed any court or government order", description: """
+            Evidence can be:
+            Cancelled checks
+            Money and receipts
+            A court or agency printout of child support payments
+            Evidence of wage garnishments
+            A letter from the parent or guardian who cares for your kid(s)
+            """, completed: false, id:6) //5 & 6 ALWAYS GO TOGETHER
+        documents[7] = Document(title: "An original N-648 Form (Medical Certification for Disability Exceptions: https://www.uscis.gov/n-648) completed less than 6 months ago by a licensed doctor or clinical psychologist", description: "See https://www.uscis.gov/n-648 for more details", completed: false, id: 7)
+        documents[8] = Document(title: "A “Status Information Letter” from Selective Service", description: "Call Selective Service at 1-847-688-6888 for information on how to obtain your status letter.", completed: false, id: 8)
+        documents[9] = Document(title: "All communication with the IRS regarding failure to file", description: "", completed: false, id: 9)
+        documents[10] = Document(title: "A signed agreement from the IRS or other tax office showing you have filed a tax return and arranged to pay taxes you owe", description: "You can get copies of tax documents and info by contacting local IRS offices, using the Blue Pages of your telephone directory, or at www.irs.gov", completed: false, id: 10) //10 & 11 ALWAYS GO TOGETHER
+        documents[11] = Document(title: "Documentation from the IRS or other tax office showing the status of your repayment", description: "You can get copies of tax documents and info by contacting local IRS offices, using the Blue Pages of your telephone directory, or at www.irs.gov", completed: false, id: 11) //10 & 11 ALWAYS GO TOGETHER
+        documents[12] = Document(title: "An original official statement by arresting agency confirming no charges were filed", description: "", completed: false, id: 12)
+        documents[13] = Document(title: "An original or court-certified copy of the arrest record and record of settlement", description: "This can be a dismissal order, conviction record, or acquittal order", completed: false, id: 13)
+        documents[14] = Document(title: "An original or court-certified copy of the sentencing record for each incident", description: "", completed: false, id: 14) //14 & 15 ALWAYS GO TOGETHER
+        documents[15] = Document(title: "Evidence you completed your sentence", description: """
+            Evidence can be:
+            An original or certified copy of your probation or parole record
+            Evidence that you completed an alternative sentencing program or rehab program
+            """, completed: false, id: 15) //14 & 15 ALWAYS GO TOGETHER
+        documents[16] = Document(title: "Include EITHER an original or court-certified copy of the court order removing the arrest or conviction OR Include an original statement from the court that no record exists of your arrest/conviction", description: "You may include any evidence in your favor concerning the circumstances of your arrest/conviction if you would like it to be considered in your application", completed: false, id: 16)
+        documents[17] = Document(title: """
+            Include:
+            Evidence your spouse has been a US citizen for the last 3 years, which could be:
+            1. Birth certificate
+            OR 2. Certificate of naturalization
+            OR 3. Certificate of citizenship
+            OR 4. Inside of front cover and signature of spouse’s current US passport
+            OR 5. FS-240 form (Report of Birth Abroad of a Citizen of the US)
+            """, description: "", completed: false, id: 17) //17, 18, 19, 20 ALWAYS GO TOGETHER
+        documents[18] = Document(title: "Proof of marriage certificate", description: "", completed: false, id: 18) //17, 18, 19, 20 ALWAYS GO TOGETHER
+        documents[19] = Document(title: "Proof of ending of former marriages (death certificates or divorce decrees)", description: "This can be death certificates or divorce decrees", completed: false, id: 19) //17, 18, 19, 20 ALWAYS GO TOGETHER
+        documents[20] = Document(title: "Documents referring to you and your spouse", description: """
+            This can be
+            Tax returns, bank accounts, leases, mortgages, or birth certificates of children
+            OR IRS-certified copies of income tax forms you filed with your spouse for the past 3 years
+            OR An IRS tax return transcript for last 3 years
+            """, completed: false, id: 20) //17, 18, 19, 20 ALWAYS GO TOGETHER
+        documents[21] = Document (title: "A N-426 Form (Request for Certification of Military or Naval Service", description: "", completed: false, id: 21)
+        
+        
+        
+
+
         
         
         // App State
