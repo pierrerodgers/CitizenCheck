@@ -26,7 +26,6 @@ class EligibilityViewModel : ObservableObject {
     }
     
     //TODO: specify why ineligible
-    //TODO: how to shorten question3 to fit 
 
     init(appData : AppData) {
         let question0 = EligibilityQuestion(question: "Are you at least 18 years old?", options: ["Yes","No"], id:0)
@@ -98,7 +97,7 @@ Do any of these apply to you:
         }
         else {
             self.currentQuestionIndex = currentQuestion.id
-            self.state = .disclaimer
+            self.state = .pending
         }
         
     }

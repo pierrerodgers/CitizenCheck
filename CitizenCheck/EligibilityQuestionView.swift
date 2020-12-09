@@ -12,6 +12,8 @@ struct EligibilityQuestionView: View {
     
     var body: some View {
         VStack(alignment:.center, spacing:10){
+            Text("Question \(question.id + 1) of 7").font(.custom("Futura", size: 12)).foregroundColor(Color(red: 0.012, green: 0.129, blue: 0.325))
+            
             if question.id != 3{
                 Text(question.question).font(.custom("Futura", size:25))
                     .fontWeight(.bold)
