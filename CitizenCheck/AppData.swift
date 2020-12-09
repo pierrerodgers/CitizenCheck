@@ -30,6 +30,9 @@ class AppData : ObservableObject {
 
     // The dict of the documents required by the user (stored by ID)
     var requiredDocuments : Dictionary<Int, Document>
+    
+    // For checklist doc logic -- maps a checklist question to a list of doc IDs
+    var questionToDoc = Dictionary<Int, [Int]>()
 
     // The list of uncompleted documents
     @Published var uncompletedDocuments : [Document]
@@ -61,12 +64,22 @@ class AppData : ObservableObject {
         let checklistQuestion6 = EligibilityQuestion(question: "Are you applying for an exception to the testing requirement based on a disability?", options:["Yes", "No"], id:6)
         let checklistQuestion7 = EligibilityQuestion(question: "Are you 1) male, 2) older than 26 and 3) did not register with the Selective Service while living in the US between ages of 18 and 26?", options:["Yes", "No"], id:7)
         let checklistQuestion8 = EligibilityQuestion(question: "Have you ever failed to file income taxes since becoming a Permanent Resident?", options:["Yes", "No"], id:8)
-        let checklistQuestion9 = EligibilityQuestion(question: "Have you ever been arrested or detained by law enforcement?", options:["Yes", "No"], id:9)
-        let checklistQuestion10 = EligibilityQuestion(question: "Are you applying on the basis of marriage to a US citizen?", options:["Yes", "No"], id:10)
-        let checklistQuestion11 = EligibilityQuestion(question: "Are you seeking citizenship on the basis of US military service?", options:["Yes", "No"], id:11)
+        // If yes, continue. If no, skip to 10
         
         
-        self.checklistQuestions = [checklistQuestion0, checklistQuestion1, checklistQuestion2, checklistQuestion3, checklistQuestion4, checklistQuestion5, checklistQuestion6, checklistQuestion7, checklistQuestion8, checklistQuestion9, checklistQuestion10, checklistQuestion11]
+        let checklistQuestion9 = EligibilityQuestion(question: "Do you have any overdue taxes (federal, state or local)", options:["Yes", "No"], id:9)
+        let checklistQuestion10 = EligibilityQuestion(question: "Have you ever been arrested or detained by law enforcement?", options:["Yes", "No"], id:10)
+        // If yes, continue. If no, skip to 15
+        
+        let checklistQuestion11 = EligibilityQuestion(question: "Have you ever been arrested or detained by law enforcement without charges being filed? ", options: ["Yes", "No"], id:11)
+        let checklistQuestion12 = EligibilityQuestion(question: "Have you ever been arrested or detained by law enforcement and had charges filed?", options: ["Yes", "No"], id:12)
+        let checklistQuestion13 = EligibilityQuestion(question: "Have you ever been convicted or placed in an alternative sentencing or rehab program (such as community service or drug treatment)?", options: ["Yes", "No"], id:13)
+        let checklistQuestion14 = EligibilityQuestion(question: "Have you ever had any arrest or conviction vacated or removed from your record?", options: ["Yes", "No"], id:14)
+        let checklistQuestion15 = EligibilityQuestion(question: "Are you applying on the basis of marriage to a US citizen?", options:["Yes", "No"], id:15)
+        let checklistQuestion16 = EligibilityQuestion(question: "Are you seeking citizenship on the basis of US military service?", options:["Yes", "No"], id:16)
+        
+        
+        self.checklistQuestions = [checklistQuestion0, checklistQuestion1, checklistQuestion2, checklistQuestion3, checklistQuestion4, checklistQuestion5, checklistQuestion6, checklistQuestion7, checklistQuestion8, checklistQuestion9, checklistQuestion10, checklistQuestion11, checklistQuestion12, checklistQuestion13, checklistQuestion14, checklistQuestion15, checklistQuestion16]
         
 
         self.documents = Dictionary<Int, Document>()
@@ -122,6 +135,24 @@ class AppData : ObservableObject {
         
         
         
+        questionToDoc[0] = [22]
+        questionToDoc[1] = [23]
+        questionToDoc[2] = [2]
+        questionToDoc[3] = [3]
+        questionToDoc[4] = [4]
+        questionToDoc[5] = [5, 6]
+        questionToDoc[6] = [7]
+        questionToDoc[7] = [8]
+        questionToDoc[8] = [9]
+        questionToDoc[9] = [10, 11]
+        questionToDoc[10] = []
+        questionToDoc[11] = [12]
+        questionToDoc[12] = [13]
+        questionToDoc[13] = [14, 15]
+        questionToDoc[14] = [16]
+        questionToDoc[15] = [17, 18, 19, 20]
+        questionToDoc[16] = [21]
+        
 
 
         
@@ -165,17 +196,13 @@ class AppData : ObservableObject {
         UserDefaults.standard.set(isEligible, forKey: "isEligible")
     }
 
-    func saveRequiredDocuments(_ documents:[Document]) {
+    func saveRequiredDocuments(_ documentIds:[Int]) {
        // TO COMPLETE: Use UserDefaults to save a list of the ids of the required documents based on the
         // checklist question answers
-        var indexId = [Int]()
-        for doc in documents {
-            indexId.append(doc.id)
-        }
-        UserDefaults.standard.set(indexId, forKey: "requiredDocuments")
+        UserDefaults.standard.set(documentIds, forKey: "requiredDocuments")
         
-        for index in indexId {
-            self.completedDocuments.append(self.documents[index]!)
+        for index in documentIds {
+            self.uncompletedDocuments.append(self.documents[index]!)
         }
     }
 
