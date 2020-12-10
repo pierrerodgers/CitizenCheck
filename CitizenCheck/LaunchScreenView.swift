@@ -13,16 +13,14 @@ struct LaunchScreenView: View {
         
         VStack(alignment: .center){
         
-            Image("logo1")
+            Image("naturalize")
                 .resizable()
-                .frame(width: 100.0, height: 101.0)
+                .frame(width: 300.0, height: 140.0)
            
-            Text("Welcome to").font(.custom("Futura", size: 20)).fontWeight(.regular).foregroundColor(Color(red: 0.011764705882352941, green: 0.11764705882352941, blue: 0.3254901960784314))
-            
-            Text("CitizenCheck").font(.custom("Futura", size: 40)).fontWeight(.semibold).foregroundColor(Color(red: 0.011764705882352941, green: 0.11764705882352941, blue: 0.3254901960784314)).padding(.top, -11.0)
-            
+            Text("A customized citizenship checklist app").font(.custom("Futura", size: 13)).fontWeight(.regular).foregroundColor(Color(hue: 0.343, saturation: 0.901, brightness: 0.618)).multilineTextAlignment(.center).padding(.top, -26.0)
+        
         }
-        .padding(.top, -40.0)
+        .padding(.top, -45.0)
     //TODO: click to disclaimer button
         }
     }
